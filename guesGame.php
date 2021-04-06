@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>Raad het nummer</title>
@@ -7,6 +8,7 @@
         <form method="post">
             <label for="gokken">Het getal is tussen 1 en 120</label>
             <input type="number" height="2em" id="gokken" min="1" max="120" name="gokje">
+            <input type="hidden" value="<?php // echo $randNumber; ?>">
             <input type="submit">
         </form>
         
