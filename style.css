@@ -27,6 +27,7 @@ form > input {
 label {
     font-size: 1.3em;
     margin-bottom: 0.7em;
+    text-align: center;
 }
 
 input[type="number"] {
