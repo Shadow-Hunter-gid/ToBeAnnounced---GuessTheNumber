@@ -1,3 +1,8 @@
+<?php
+    // 
+    $min = 1;
+    $max = 120;
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -7,8 +12,8 @@
     <body>
         <h1>Raad het nummer</h1>
         <form method="post">
-            <label for="gokken">Het getal is tussen 1 en 120</label>
-            <input type="number" height="2em" id="gokken" min="1" max="120" name="gokje">
+            <label for="gokken"><?php echo "Het getal is tussen de {$min} en de {$max}"; ?></label>
+            <input type="number" height="2em" id="gokken" min="<?php echo $min; ?>" max="<?php echo $max; ?>" name="gokje">
             <input type="hidden" value="<?php 
             if (isset($_POST["hetNummer"])) {
                 echo $_POST["hetNummer"];                
