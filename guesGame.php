@@ -1,6 +1,6 @@
 <html>
     <head>
-        <?php include "functions.php"?>
+        <?php //include "functions.php"?>
         <link rel="stylesheet" href="style.css">
         <title>Raad het nummer</title>
     </head>
