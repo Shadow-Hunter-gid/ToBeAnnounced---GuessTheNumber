@@ -8,7 +8,7 @@
         <h1>Raad het nummer</h1>
         <form method="post">
             <label for="gokken">Het getal is tussen 1 en 120</label>
-            <input type="number" height="2em" id="gokken" min="1" max="120" name="gokje">
+            <input type="number" id="gokken" min="1" max="120" name="gokje">
             <input type="hidden" value="<?php 
             // Functie die het nummer random genereert binnen een waarde van 1 en 120
             if (isset($_POST["hetNummer"])) {
@@ -25,7 +25,7 @@
                     $counter++;
                     echo $counter;
                 } else {
-                    echo 0;
+                    echo 1;
                 }
                 
             ?>" name="counter">
@@ -38,7 +38,13 @@
                 
                 */ 
             ?>
-            <input type="submit">
+            <input type="submit" <?php 
+                if (isset($_POST["counter"])) {
+                    if ($_POST["counter"] == 10){ 
+                        echo "disabled";
+                    }
+                }
+                ?>>
         </form>
         <?php
             // Functie die de guess vergelijkt met het antwoord
