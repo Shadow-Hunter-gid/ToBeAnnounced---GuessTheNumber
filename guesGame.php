@@ -10,6 +10,7 @@
             <label for="gokken">Het getal is tussen 1 en 120</label>
             <input type="number" height="2em" id="gokken" min="1" max="120" name="gokje">
             <input type="hidden" value="<?php 
+            // Functie die het nummer random genereert binnen een waarde van 1 en 120
             if (isset($_POST["hetNummer"])) {
                 echo $_POST["hetNummer"];                
             } else {
@@ -17,6 +18,7 @@
             }
             
             ?>" name="hetNummer">
+            <!--Functie die de waarde verbergt en bij elke poging de counter verhoogt-->
             <input type="hidden" value="<?php  
                 if (isset($_POST["counter"])) {
                     $counter = $_POST["counter"];
@@ -38,9 +40,9 @@
             ?>
             <input type="submit">
         </form>
-        
         <?php
-            
+            // Functie die de guess vergelijkt met het antwoord
+            // en de speler vertelt of het antwoord hoger of lager ligt
             if (isset($_POST["hetNummer"])) {
                 echo "<p>";
                 if ($_POST["hetNummer"] > $_POST["gokje"]) {
@@ -50,25 +52,14 @@
                 } else {
                     echo "Correct<br>";
                 }   
-                
-                if (isset($_POST["counter"])){
+                if (isset($_POST["counter"])) {
                     echo $_POST["counter"];
                 }
-                 echo "</p>";
-            }
-           
+                echo "</p>";
+            }   
         ?>
         <form method="post" action="guesGame.php">
             <input type="submit" value="Reset" name="reset">
         </form>
-        <?php
-            $_POST["hetNummer"] = rand(1, 120);
-        ?>
-
-
-
-        <?php
-            echo guessedNumbers(37);
-        ?>
     </body>
 </html>
