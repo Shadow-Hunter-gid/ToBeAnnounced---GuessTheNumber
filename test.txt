@@ -1,1 +1,31 @@
-test
+introductie
+	welkom heten
+	voorstellen team
+		nog geen team naam
+	voorstellen rollen
+		klikker etienne, presenteren gavin, daan
+		
+wat hebben we gedaan
+	wat hebben we afgesproken
+		een begin gemaakt aan guess game en de css
+	wat heb je gedaan/is hiervan gelukt
+		dit is gelukt
+
+project
+	laat het project zien van begin tot einde
+		daan legt code uit, gavin de css, etienne bestuurd de applicatie
+	maak hierin een logisch verhaal
+		daan zet comments bij de code zodat hierover makkelijker te vertellen is wat de code doet
+		gavin verteld wat over de css die etienne geschreven heeft
+	klanten kennen geen vaktermen
+	collega's kennen vaktermen
+
+afsluiting
+	zijn er nog vragen/opmerkingen
+	afsluiting
+	
+	
+	
+het form is opgebouwd met flexbox
+em = relatief tot het huidige font size
+css is op het input type gehangen. er waren weinig elementen dus de css hangen aan het element zelf had niet echt een naam/id nodig
