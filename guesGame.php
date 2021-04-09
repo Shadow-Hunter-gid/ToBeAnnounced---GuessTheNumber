@@ -10,7 +10,8 @@
             <label for="gokken">Het getal is tussen 1 en 120</label>
             <input type="number" id="gokken" min="1" max="120" name="gokje">
             <input type="hidden" value="<?php 
-            // Functie die het nummer random genereert binnen een waarde van 1 en 120
+            // Functie die het nummer random genereert 
+            // binnen een waarde van 1 en 120
             if (isset($_POST["hetNummer"])) {
                 echo $_POST["hetNummer"];                
             } else {
@@ -18,8 +19,9 @@
             }
             
             ?>" name="hetNummer">
-            <!--Functie die de waarde verbergt en bij elke poging de counter verhoogt-->
             <input type="hidden" value="<?php  
+            // Functie die de waarde verbergt 
+            // en bij elke poging de counter verhoogt
                 if (isset($_POST["counter"])) {
                     $counter = $_POST["counter"];
                     $counter++;
@@ -39,6 +41,9 @@
                 */ 
             ?>
             <input type="submit" <?php 
+                // Functie voor het maximale aantal pogingen
+                // Bij de 10e poging wordt de knop gedisabled
+                // De speler heeft verloren
                 if (isset($_POST["counter"])) {
                     if ($_POST["counter"] == 10){ 
                         echo "disabled";
