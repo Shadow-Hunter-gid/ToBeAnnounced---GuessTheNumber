@@ -40,8 +40,9 @@
         </form>
         
         <?php
-            echo "<p>";
+            
             if (isset($_POST["hetNummer"])) {
+                echo "<p>";
                 if ($_POST["hetNummer"] > $_POST["gokje"]) {
                     echo "Guess higher<br>";
                 } elseif ($_POST["hetNummer"] < $_POST["gokje"]) {
@@ -50,8 +51,10 @@
                     echo "Correct<br>";
                 }   if (isset($_POST["counter"]))
                     echo $_POST["counter"];
+                }
+                 echo "</p>";
             }
-            echo "</p>";   
+           
         ?>
         <form method="post" action="guesGame.php">
             <input type="submit" value="Reset" name="reset">
