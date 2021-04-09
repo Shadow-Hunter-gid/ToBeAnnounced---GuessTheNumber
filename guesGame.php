@@ -49,7 +49,9 @@
                     echo "Guess lower<br>";
                 } else {
                     echo "Correct<br>";
-                }   if (isset($_POST["counter"]))
+                }   
+                
+                if (isset($_POST["counter"])){
                     echo $_POST["counter"];
                 }
                  echo "</p>";
