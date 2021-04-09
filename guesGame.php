@@ -1,5 +1,6 @@
 <html>
     <head>
+        <?php include "functions.php"?>
         <link rel="stylesheet" href="style.css">
         <title>Raad het nummer</title>
     </head>
@@ -57,6 +58,12 @@
         </form>
         <?php
             $_POST["hetNummer"] = rand(1, 120);
+        ?>
+
+
+
+        <?php
+            echo guessedNumbers(37);
         ?>
     </body>
 </html>
